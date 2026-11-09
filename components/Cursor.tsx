@@ -14,8 +14,6 @@ export default function Cursor() {
     const r = ring.current;
     if (!fine || reduce || !d || !r) return;
 
-    d.hidden = false;
-    r.hidden = false;
     let mx = 0, my = 0, dx = 0, dy = 0, rx = 0, ry = 0;
     let raf = 0;
 
@@ -28,9 +26,17 @@ export default function Cursor() {
       r.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
       raf = Math.abs(mx - rx) < 0.1 && Math.abs(my - ry) < 0.1 ? 0 : requestAnimationFrame(loop);
     };
+    let started = false;
     const onMove = (e: MouseEvent) => {
       mx = e.clientX;
       my = e.clientY;
+      if (!started) {
+        started = true;
+        dx = rx = mx;
+        dy = ry = my;
+        d.hidden = false;
+        r.hidden = false;
+      }
       if (!raf) raf = requestAnimationFrame(loop);
     };
     const SEL = "a, button, .interactive-el";

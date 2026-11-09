@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 border-t border-primary pt-8 text-xs text-soft/80 md:flex-row">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <nav className="flex gap-6 uppercase tracking-widest" aria-label="Footer">
-            {[["#home", "Home"], ["#about", "About"], ["#works", "Works"], ["#contact", "Contact"]].map(([h, l]) => (
+            {[["/#home", "Home"], ["/#about", "About"], ["/#works", "Works"], ["/#contact", "Contact"]].map(([h, l]) => (
               <a key={h} href={h} className="transition-colors hover:text-accent">{l}</a>
             ))}
           </nav>

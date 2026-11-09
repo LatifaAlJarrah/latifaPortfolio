@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { projects, type Project } from "@/data/projects";
 import ProjectLinks from "./ProjectLinks";
 
@@ -40,7 +42,15 @@ function SplitCard({ p, reverse }: { p: Project; reverse?: boolean }) {
         <span className="mb-2 block text-xs uppercase tracking-widest text-muted">{p.category}</span>
         <h3 className="mb-4 font-serif text-3xl text-primary md:text-4xl">{p.title}</h3>
         <p className="mb-6 text-sm leading-relaxed text-body md:text-base">{p.description}</p>
-        <div className="mb-8"><TechList tech={p.tech} /></div>
+        <div className="mb-5"><TechList tech={p.tech} /></div>
+        <Link
+          href={`/projects/${p.slug}`}
+          className="interactive-el group/more mb-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary hover:text-accent-dark"
+        >
+          <span>Project details</span>
+          <ArrowRight className="h-4 w-4 transition-transform group-hover/more:translate-x-1" />
+        </Link>
+        
         <ProjectLinks title={p.title} live={p.live} code={p.code} />
       </div>
     </article>
@@ -55,12 +65,20 @@ function BannerCard({ p }: { p: Project }) {
         alt={p.image.alt}
         fill
         sizes="100vw"
-        className="object-cover saturate-[0.85] transition-transform duration-700 group-hover:scale-105 group-hover:saturate-100"
+        className="object-cover object-top saturate-[0.85] transition-transform duration-700 group-hover:scale-105 group-hover:saturate-100"
       />
       <div className="relative flex min-h-[34rem] flex-col justify-end bg-gradient-to-t from-olive-dark/95 via-olive-dark/60 to-olive-dark/10 p-6 sm:p-8 md:p-12 lg:min-h-[28rem]">
         <span className="mb-2 block text-xs uppercase tracking-widest text-accent">{p.category}</span>
         <h3 className="mb-4 font-serif text-3xl text-warm md:text-5xl">{p.title}</h3>
-        <p className="mb-6 max-w-2xl text-sm leading-relaxed text-soft md:text-base">{p.description}</p>
+        <p className="mb-4 max-w-2xl text-sm leading-relaxed text-soft md:text-base">{p.description}</p>
+        <Link
+          href={`/projects/${p.slug}`}
+          className="interactive-el group/more mb-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-accent hover:text-warm"
+        >
+          <span>Project details</span>
+          <ArrowRight className="h-4 w-4 transition-transform group-hover/more:translate-x-1" />
+        </Link>
+        
         <div className="flex flex-wrap items-center justify-between gap-4">
           <TechList tech={p.tech} dark />
           <ProjectLinks title={p.title} live={p.live} code={p.code} dark />

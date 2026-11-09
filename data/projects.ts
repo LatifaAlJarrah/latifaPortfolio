@@ -4,6 +4,7 @@ export type Project = {
   category: string;
   description: string;
   tech: string[];
+  features: string[];
   image: { src: string; alt: string; width: number; height: number };
   live: string;
   code: string;
@@ -24,11 +25,18 @@ export const projects: Project[] = [
       "MongoDB",
       "Prisma",
     ],
+    features: [
+      "Browse ready-made portfolio templates",
+      "Build a personalized portfolio website from a template",
+      "Authentication and user flows with NextAuth",
+      "Data layer built on MongoDB and Prisma",
+      "Responsive interface built with Next.js and React",
+    ],
     image: {
       src: "/images/profolio.png",
       alt: "Profolio template marketplace homepage",
-      width: 1600,
-      height: 1333,
+      width: 1896,
+      height: 914,
     },
     live: "https://profolio-coral-seven.vercel.app/",
     code: "https://github.com/LatifaAlJarrah/Profolio",
@@ -40,11 +48,18 @@ export const projects: Project[] = [
     description:
       "A responsive e-commerce storefront for furniture and mattresses, featuring category-based product browsing, product filtering, recommended products, shopping cart, wishlist navigation, authentication interfaces, and checkout. I designed and developed the front-end experience with a focus on responsive layouts, reusable components, and intuitive shopping interactions.",
     tech: ["HTML5", "CSS3", "JavaScript"],
+    features: [
+      "Category-based product browsing",
+      "Product filtering",
+      "Recommended products",
+      "Shopping cart and wishlist navigation",
+      "Authentication interfaces and checkout",
+    ],
     image: {
       src: "/images/ultimate-furniture.avif",
       alt: "Ultimate Furniture homepage hero section showing a modern living room",
-      width: 1600,
-      height: 1000,
+      width: 828,
+      height: 621,
     },
     live: "https://furniture-store-snowy-ten.vercel.app/",
     code: "https://github.com/LatifaAlJarrah/Furniture-Store",
@@ -56,11 +71,18 @@ export const projects: Project[] = [
     description:
       "A responsive e-commerce storefront for professional kitchen equipment, featuring product category navigation, promotional banners, featured products, best-seller sections, and customer FAQs. I designed and developed the front-end experience with a focus on clean layouts, intuitive product discovery, reusable components, and responsive design.",
     tech: ["HTML5", "CSS3", "JavaScript"],
+    features: [
+      "Product category navigation",
+      "Promotional banners",
+      "Featured products and best-seller sections",
+      "Customer FAQs",
+      "Responsive layout across devices",
+    ],
     image: {
       src: "/images/chef-supply.avif",
       alt: "Professional kitchen equipment displayed in the Chefsupply banner",
       width: 1920,
-      height: 820,
+      height: 2876,
     },
     live: "https://chef-supply-mocha.vercel.app/",
     code: "https://github.com/LatifaAlJarrah/Chef-Supply",
