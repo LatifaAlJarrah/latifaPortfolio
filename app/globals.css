@@ -9,6 +9,7 @@
   --color-muted: #4f5744;
   --color-body: #4a4a4a;
   --color-accent: #b5a27a;
+  --color-accent-light: #cdbd95; /* text on dark green: 5.1:1 */
   --color-accent-dark: #8a7550;
   --color-line: #d2c9b5;
 

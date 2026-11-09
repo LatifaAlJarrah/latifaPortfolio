@@ -51,7 +51,7 @@ export default function About() {
                   “Good design isn&apos;t decoration — it&apos;s the difference between a user struggling and a
                   user not even noticing.”
                 </blockquote>
-                <figcaption className="text-[11px] uppercase tracking-widest text-accent">— Latifa</figcaption>
+                <figcaption className="text-[11px] uppercase tracking-widest text-accent-light">— Latifa</figcaption>
               </figure>
             </div>
           </div>

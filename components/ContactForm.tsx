@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 type Status = { kind: "idle" | "sending" | "ok" | "error"; message?: string };
 
 const field =
-  "w-full rounded-lg border border-accent/30 bg-primary/50 px-4 py-3 text-sm text-warm placeholder:text-soft/60 focus:border-accent focus:outline-none transition-colors";
+  "w-full rounded-lg border border-accent/30 bg-primary/50 px-4 py-3 text-sm text-warm placeholder:text-soft/80 focus:border-accent focus:outline-none transition-colors";
 const label = "mb-2 block text-xs uppercase tracking-widest text-accent";
 
 export default function ContactForm() {
