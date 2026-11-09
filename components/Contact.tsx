@@ -10,7 +10,7 @@ export default function Contact() {
     <section id="contact" className="relative bg-primary py-32 text-warm">
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-16 text-center">
-          <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
             06 — Get in touch
           </span>
           <h2 className="mb-4 font-serif text-4xl md:text-6xl">Let&apos;s create something meaningful.</h2>

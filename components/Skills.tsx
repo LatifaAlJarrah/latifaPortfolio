@@ -7,7 +7,7 @@ export default function Skills() {
         <span
           key={`${s}-${i}`}
           className={`px-6 text-2xl md:text-4xl ${
-            i % 2 === 0 ? "font-serif italic text-accent" : "font-light tracking-wider"
+            i % 2 === 0 ? "font-serif italic text-accent-light" : "font-light tracking-wider"
           }`}
         >
           {s}
@@ -18,7 +18,7 @@ export default function Skills() {
   return (
     <section id="skills" className="overflow-hidden bg-primary py-28 text-warm">
       <div className="mx-auto mb-16 max-w-7xl px-6 text-center">
-        <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+        <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
           03 — Expertise
         </span>
         <h2 className="font-serif text-4xl md:text-5xl">Tools I Build With</h2>

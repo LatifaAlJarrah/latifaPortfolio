@@ -51,8 +51,8 @@ export default function Hero() {
               <Image
                 src="/images/latifa.jpeg"
                 alt="Portrait of Latifa Al Jarrah, front-end developer"
-                width={1040}
-                height={1300}
+                width={1024}
+                height={1024}
                 priority
                 sizes="(min-width: 1024px) 520px, (min-width: 768px) 384px, 288px"
                 className="z-20 w-72 rounded-2xl border border-line object-cover shadow-lg mix-blend-multiply md:w-96 lg:w-[520px]"

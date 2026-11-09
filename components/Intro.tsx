@@ -11,6 +11,7 @@ export default function Intro() {
         <span className="mb-6 block text-xs font-semibold uppercase tracking-[0.2em] text-muted">
           01 — Introduction
         </span>
+        <h2 className="sr-only">Introduction</h2>
         <blockquote>
           <p className="font-serif text-4xl leading-[1.15] md:text-6xl lg:text-7xl">
             “I build thoughtful interfaces where design meets technology.”
