@@ -16,7 +16,14 @@ export const projects: Project[] = [
     category: "Web Application / Portfolio Platform",
     description:
       "A portfolio-building platform that allows users to explore ready-made templates and create a personalized portfolio website. I built the responsive interface and implemented the core user flows using Next.js, React.js and modern front-end technologies.",
-    tech: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma"],
+    tech: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Prisma",
+    ],
     image: {
       src: "/images/profolio.png",
       alt: "Profolio template marketplace homepage",
@@ -31,11 +38,10 @@ export const projects: Project[] = [
     title: "Ultimate Furniture",
     category: "E-Commerce / Retail",
     description:
-      "A responsive e-commerce interface for furniture and mattresses, featuring product browsing, shopping cart, wishlist, authentication, and checkout flows. I designed and developed the front-end experience with a focus on responsive layouts, reusable components, and smooth user interactions.",
+      "A responsive e-commerce storefront for furniture and mattresses, featuring category-based product browsing, product filtering, recommended products, shopping cart, wishlist navigation, authentication interfaces, and checkout. I designed and developed the front-end experience with a focus on responsive layouts, reusable components, and intuitive shopping interactions.",
     tech: ["HTML5", "CSS3", "JavaScript"],
-    // TODO: save this image into /public/images and use a local path
     image: {
-      src: "https://furniture-store-snowy-ten.vercel.app/src/assets/images/home-slide1.jpg",
+      src: "/images/ultimate-furniture.avif",
       alt: "Ultimate Furniture homepage hero section showing a modern living room",
       width: 1600,
       height: 1000,
@@ -47,13 +53,11 @@ export const projects: Project[] = [
     slug: "chefsupply",
     title: "Chefsupply",
     category: "E-Commerce / Retail",
-    // TODO: confirm this description matches the real features of the project
     description:
-      "A responsive e-commerce interface for professional kitchen equipment, with product browsing and clear, easy-to-scan layouts. I designed and developed the front end with a focus on responsive design, reusable components, and smooth interactions.",
+      "A responsive e-commerce storefront for professional kitchen equipment, featuring product category navigation, promotional banners, featured products, best-seller sections, and customer FAQs. I designed and developed the front-end experience with a focus on clean layouts, intuitive product discovery, reusable components, and responsive design.",
     tech: ["HTML5", "CSS3", "JavaScript"],
-    // TODO: save this image into /public/images and use a local path
     image: {
-      src: "https://chef-supply-mocha.vercel.app/src/assets/images/banner-image.jpg",
+      src: "/images/chef-supply.avif",
       alt: "Professional kitchen equipment displayed in the Chefsupply banner",
       width: 1920,
       height: 820,
