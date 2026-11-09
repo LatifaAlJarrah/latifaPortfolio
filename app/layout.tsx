@@ -3,6 +3,7 @@ import { DM_Serif_Display, Inter } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
 
+
 const serif = DM_Serif_Display({
   subsets: ["latin"],
   weight: "400",
@@ -22,16 +23,22 @@ export const metadata: Metadata = {
   description: site.description,
   authors: [{ name: site.name }],
   alternates: { canonical: "/" },
-  robots: { index: true, follow: true, googleBot: { "max-image-preview": "large" } },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { "max-image-preview": "large" },
+  },
   openGraph: {
     type: "website",
     url: "/",
     siteName: site.name,
     title: site.title,
-    description: "Responsive, accessible web experiences built with React, Next.js and TypeScript.",
+    description:
+      "Responsive, accessible web experiences built with React, Next.js and TypeScript.",
     locale: "en_US",
   },
   twitter: { card: "summary_large_image", title: site.title },
+  verification: { google: "Y5PJXS4ancZB2cMJmwLqooCyyxPX01ENEBItDTx7Tuo" },
 };
 
 export const viewport: Viewport = { themeColor: "#3F4932" };
@@ -47,7 +54,11 @@ const jsonLd = {
   sameAs: [site.github, site.linkedin],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body>
