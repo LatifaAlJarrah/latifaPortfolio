@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
+import { site } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -45,6 +46,15 @@ export default function Hero() {
                   Let&apos;s Talk
                 </a>
               </div>
+              <a
+                href={site.cv}
+                download
+                className="rise interactive-el mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-muted transition-colors hover:text-primary"
+                style={{ animationDelay: "480ms" }}
+              >
+                <Download className="h-4 w-4" />
+                <span>Download CV</span>
+              </a>
             </div>
 
             <div className="flex justify-center lg:w-1/2 lg:justify-end">

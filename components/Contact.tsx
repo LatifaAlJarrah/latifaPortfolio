@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-16 text-center">
           <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-accent-light">
-            06 — Get in touch
+            07 — Get in touch
           </span>
           <h2 className="mb-4 font-serif text-4xl md:text-6xl">Let&apos;s create something meaningful.</h2>
           <p className="mx-auto max-w-lg text-sm leading-relaxed text-soft md:text-base">

@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import CaseStudy from "@/components/CaseStudy";
+import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
@@ -20,6 +21,7 @@ export default function Home() {
         <Projects />
         <Skills />
         <About />
+        <Experience />
         <CaseStudy />
         <Contact />
       </main>

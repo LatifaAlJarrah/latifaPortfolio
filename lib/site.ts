@@ -5,6 +5,7 @@ export const site = {
     "Latifa Al Jarrah is a front-end developer building responsive, accessible web experiences with React, Next.js and TypeScript.",
   url: "https://aljarrahlatifa.vercel.app",
   email: "latifajarrah22@gmail.com",
+  cv: "/Latifa-Al-Jarrah-CV.pdf",
   github: "https://github.com/LatifaAlJarrah",
   linkedin: "https://www.linkedin.com/in/latifaaljarrah/",
 } as const;

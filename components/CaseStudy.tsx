@@ -3,10 +3,10 @@ import { ArrowLeft } from "lucide-react";
 
 export default function CaseStudy() {
   return (
-    <section id="project-detail" className="bg-soft py-32 text-ink">
+    <section id="project-detail" className="bg-warm py-32 text-ink">
       <div className="mx-auto max-w-5xl px-6">
         <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-          05 — Case Study
+          06 — Case Study
         </span>
         <h2 className="mb-6 max-w-2xl font-serif text-4xl text-primary md:text-6xl">
           Profolio: A Portfolio Template Marketplace
@@ -17,7 +17,7 @@ export default function CaseStudy() {
         </p>
 
         <div className="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="rounded-2xl border border-line bg-warm p-8">
+          <div className="rounded-2xl border border-line bg-soft p-8">
             <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">The Challenge</h3>
             <p className="text-sm leading-relaxed text-body">
               Finding a polished portfolio template is often only the first step. Users still need a simple way
@@ -25,7 +25,7 @@ export default function CaseStudy() {
               personalized website.
             </p>
           </div>
-          <div className="rounded-2xl border border-line bg-warm p-8">
+          <div className="rounded-2xl border border-line bg-soft p-8">
             <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">The Approach</h3>
             <p className="text-sm leading-relaxed text-body">
               I built Profolio as a template marketplace where users can explore ready-made designs and build a
@@ -35,7 +35,7 @@ export default function CaseStudy() {
           </div>
         </div>
 
-        <div className="relative mb-12 aspect-[16/9] overflow-hidden rounded-2xl border border-line bg-warm">
+        <div className="relative mb-12 aspect-[16/9] overflow-hidden rounded-2xl border border-line bg-soft">
           <Image
             src="/images/image.png"
             alt="Profolio homepage and template gallery interface"

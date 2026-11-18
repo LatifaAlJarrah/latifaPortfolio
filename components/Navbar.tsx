@@ -5,11 +5,12 @@ import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#works", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#works", label: "Projects" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -49,7 +50,7 @@ export default function Navbar() {
             LATIFA.
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
+          <nav className="hidden items-center gap-6 md:flex lg:gap-8" aria-label="Main">
             {links.map((l) => (
               <a
                 key={l.href}
@@ -63,7 +64,7 @@ export default function Navbar() {
 
           <a
             href={`mailto:${site.email}`}
-            className="interactive-el hidden text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:text-accent-dark md:block"
+            className="interactive-el hidden text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:text-accent-dark lg:block"
           >
             Let&apos;s Talk
           </a>

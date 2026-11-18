@@ -51,6 +51,8 @@ const jsonLd = {
   url: site.url,
   email: `mailto:${site.email}`,
   knowsAbout: ["React", "Next.js", "TypeScript", "Tailwind CSS", "UI Design"],
+  worksFor: { "@type": "Organization", name: "Palestinian Federation of Industries" },
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Al-Aqsa University" },
   sameAs: [site.github, site.linkedin],
 };
 
