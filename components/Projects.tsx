@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ProjectImage from "./ProjectImage";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { projects, type Project } from "@/data/projects";
@@ -29,10 +29,8 @@ function SplitCard({ p, reverse }: { p: Project; reverse?: boolean }) {
           reverse ? "order-1 lg:order-2" : ""
         }`}
       >
-        <Image
-          src={p.image.src}
-          alt={p.image.alt}
-          fill
+        <ProjectImage
+          project={p}
           sizes="(min-width: 1024px) 58vw, 100vw"
           className="object-cover object-left transition-transform duration-700 group-hover:scale-[1.03]"
         />
@@ -51,7 +49,7 @@ function SplitCard({ p, reverse }: { p: Project; reverse?: boolean }) {
           <ArrowRight className="h-4 w-4 transition-transform group-hover/more:translate-x-1" />
         </Link>
         
-        <ProjectLinks title={p.title} live={p.live} code={p.code} />
+        <ProjectLinks title={p.title} live={p.live} code={p.code} liveLabel={p.liveLabel} />
       </div>
     </article>
   );
@@ -60,10 +58,8 @@ function SplitCard({ p, reverse }: { p: Project; reverse?: boolean }) {
 function BannerCard({ p }: { p: Project }) {
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-line bg-olive-dark">
-      <Image
-        src={p.image.src}
-        alt={p.image.alt}
-        fill
+      <ProjectImage
+        project={p}
         sizes="100vw"
         className="object-cover object-top saturate-[0.85] transition-transform duration-700 group-hover:scale-105 group-hover:saturate-100"
       />
@@ -81,7 +77,7 @@ function BannerCard({ p }: { p: Project }) {
         
         <div className="flex flex-wrap items-center justify-between gap-4">
           <TechList tech={p.tech} dark />
-          <ProjectLinks title={p.title} live={p.live} code={p.code} dark />
+          <ProjectLinks title={p.title} live={p.live} code={p.code} liveLabel={p.liveLabel} dark />
         </div>
       </div>
     </article>

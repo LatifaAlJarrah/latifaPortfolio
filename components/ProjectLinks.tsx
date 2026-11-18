@@ -1,9 +1,9 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { GithubIcon } from "./icons";
 
-type Props = { title: string; live: string; code: string; dark?: boolean };
+type Props = { title: string; live: string; code?: string; liveLabel?: string; dark?: boolean };
 
-export default function ProjectLinks({ title, live, code, dark }: Props) {
+export default function ProjectLinks({ title, live, code, liveLabel = "Live Demo", dark }: Props) {
   const primary = dark
     ? "bg-warm text-primary hover:bg-accent hover:text-ink"
     : "bg-primary text-warm hover:bg-olive-dark";
@@ -19,24 +19,26 @@ export default function ProjectLinks({ title, live, code, dark }: Props) {
         href={live}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`Open the ${title} live demo (opens in a new tab)`}
+        aria-label={`Open ${title}: ${liveLabel} (opens in a new tab)`}
         className={`${base} shadow-sm ${primary}`}
       >
         <ExternalLink className="h-4 w-4" />
-        <span>Live Demo</span>
+        <span>{liveLabel}</span>
         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
       </a>
-      <a
-        href={code}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`View ${title} source code on GitHub (opens in a new tab)`}
-        className={`${base} ${secondary}`}
-      >
-        <GithubIcon className="h-4 w-4" />
-        <span>View Code</span>
-        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
-      </a>
+      {code && (
+        <a
+          href={code}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${title} source code on GitHub (opens in a new tab)`}
+          className={`${base} ${secondary}`}
+        >
+          <GithubIcon className="h-4 w-4" />
+          <span>View Code</span>
+          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
+        </a>
+      )}
     </div>
   );
 }

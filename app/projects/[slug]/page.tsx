@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ProjectImage from "@/components/ProjectImage";
 import ProjectLinks from "@/components/ProjectLinks";
 import { projects } from "@/data/projects";
 
@@ -57,19 +57,19 @@ export default async function ProjectPage({ params }: Props) {
           <h1 className="mb-6 font-serif text-5xl text-primary md:text-7xl">{p.title}</h1>
           <p className="mb-10 max-w-3xl text-base leading-relaxed text-body md:text-lg">{p.description}</p>
           <div className="mb-12">
-            <ProjectLinks title={p.title} live={p.live} code={p.code} />
+            <ProjectLinks title={p.title} live={p.live} code={p.code} liveLabel={p.liveLabel} />
           </div>
 
-          <div className="relative mb-16 aspect-[16/10] overflow-hidden rounded-2xl border border-line bg-soft">
-            <Image
-              src={p.image.src}
-              alt={p.image.alt}
-              fill
-              priority
-              sizes="(min-width: 1024px) 960px, 100vw"
-              className="object-cover object-top"
-            />
-          </div>
+          {p.image && (
+            <div className="relative mb-16 aspect-[16/10] overflow-hidden rounded-2xl border border-line bg-soft">
+              <ProjectImage
+                project={p}
+                priority
+                sizes="(min-width: 1024px) 960px, 100vw"
+                className="object-cover object-top"
+              />
+            </div>
+          )}
 
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
             <section aria-labelledby="features">
@@ -87,7 +87,7 @@ export default async function ProjectPage({ params }: Props) {
             </section>
             <section aria-labelledby="stack">
               <h2 id="stack" className="mb-5 text-xs font-semibold uppercase tracking-widest text-primary">
-                Built with
+                {p.techLabel ?? "Built with"}
               </h2>
               <ul className="flex flex-wrap gap-2">
                 {p.tech.map((t) => (

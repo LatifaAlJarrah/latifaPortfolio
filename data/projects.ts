@@ -4,13 +4,35 @@ export type Project = {
   category: string;
   description: string;
   tech: string[];
+  techLabel?: string;
   features: string[];
-  image: { src: string; alt: string; width: number; height: number };
+  image?: { src: string; alt: string; width: number; height: number };
   live: string;
-  code: string;
+  liveLabel?: string;
+  code?: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: "ind-damage-assessment",
+    title: "IND — Industrial Damage Assessment",
+    category: "National Platform / Palestinian Federation of Industries",
+    description:
+      "A national platform for tracking and evaluating damage across the industrial sector in Gaza, implemented by the Palestinian Federation of Industries. As a front-end developer, I contributed to building intuitive, responsive interfaces that streamline data collection and give stakeholders and decision-makers a clearer picture, including interactive data visualizations such as graphs and maps.",
+    // TODO: replace with the real stack once confirmed
+    tech: ["Responsive UI", "Data Visualization", "API Integration"],
+    techLabel: "Focus areas",
+    features: [
+      "Registration and assessment-request flows for owners of damaged industrial facilities",
+      "Interfaces that streamline data collection for field and technical teams",
+      "Interactive data visualizations, including graphs and maps",
+      "Front-end integration with back-end systems and APIs",
+      "Arabic-language interface, responsive across desktop and tablet",
+    ],
+    // TODO: add a screenshot at /public/images/ind.png and set image: { src: "/images/ind.png", alt, width, height }
+    live: "https://ida.pfi.ps/",
+    liveLabel: "Visit Website",
+  },
   {
     slug: "profolio",
     title: "Profolio",
@@ -91,13 +113,13 @@ export const projects: Project[] = [
 
 export const skills = [
   { label: "Front-End", value: "React & Next.js" },
-  { label: "Language", value: "TypeScript" },
+  { label: "Languages", value: "TypeScript & JavaScript" },
   { label: "Styling", value: "Tailwind CSS" },
-  { label: "State", value: "Zustand / Hooks" },
-  { label: "Design", value: "Figma & UI" },
+  { label: "Backend (basic)", value: "MySQL" },
+  { label: "Tools", value: "Git, GitHub & Figma" },
 ];
 
 export const marqueeSkills = [
   "React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS",
-  "Zustand", "Supabase", "Node.js", "Figma", "Git & GitHub",
+  "HTML & CSS", "MySQL", "Git & GitHub", "Figma", "Cursor",
 ];
